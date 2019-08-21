@@ -31,4 +31,4 @@ make
 # Install wrk binary into /usr/local/bin
 sudo cp wrk /usr/bin/
 
-sudo apt-get remove unattended-upgrades
+sudo apt-get remove -y unattended-upgrades

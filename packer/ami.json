@@ -10,7 +10,7 @@
         "secret_key": "{{user `aws_secret_key`}}",
         "region": "us-east-1",
         "source_ami": "ami-263d0b5c",
-        "instance_type": "t2.small",
+        "instance_type": "m3.medium",
         "ssh_username": "ubuntu",
         "ami_name": "rails-ruby-benchmark {{timestamp}}",
 	"run_tags": {

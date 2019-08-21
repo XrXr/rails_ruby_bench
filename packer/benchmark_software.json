@@ -5,45 +5,18 @@
   },
   "discourse": {
       "git_url": "https://github.com/discourse/discourse.git",
-      "git_tag": "v1.8.0.beta13"
+      "git_tag": "v2.3.2"
   },
   "compare_rubies": [
       {
-          "rvm_name": "2.0.0-p0",
-          "discourse": false
-      },
-      {
-          "rvm_name": "2.0.0-p648",
-          "discourse": false
-      },
-      {
-          "rvm_name": "2.1.10",
-          "discourse": false
-      },
-      {
-          "rvm_name": "2.2.10",
-          "discourse": false
-      },
-      {
-          "rvm_name": "2.3.8",
-          "discourse": false
-      },
-      {
-          "rvm_name": "2.4.5"
-      },
-      {
-          "rvm_name": "2.5.3"
-      },
-      {
-          "rvm_name": "2.6.0"
-      },
-      {
-          "rvm_name": "jruby-9.2.5.0",
-          "discourse": false
-      },
-      {
           "name": "mri-head",
-          "git_url": "git://github.com/ruby/ruby.git"
+          "git_url": "git://github.com/ruby/ruby.git",
+          "git_tag": "864f23a457291e64cb6a0703dcc0b3e26e4cf109"
+      },
+      {
+          "name": "patched-mri-head",
+          "git_url": "https://github.com/XrXr/ruby.git",
+          "git_tag": "d37c906b04fe0286b625cdfebe3f520a1a7d5677"
       }
   ]
 }
