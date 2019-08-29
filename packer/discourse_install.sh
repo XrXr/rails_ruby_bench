@@ -1,6 +1,6 @@
 # To be run as "ubuntu" user with sudo access.
 
-set -e
+set -xe
 
 #sleep 30 # Time for OS to boot properly during AMI build
 
