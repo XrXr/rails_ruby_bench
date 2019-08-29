@@ -37,7 +37,7 @@ SETUP
 # Checked system - error if the command fails
 def csystem(cmd, err, opts = {})
   cmd = "bash -l -c \"#{cmd}\"" if USE_BASH && opts[:bash]
-  print "Running command: #{cmd.inspect}\n" if VERBOSE || opts[:debug] || opts["debug"]
+  print "Running command: #{cmd.inspect}\n" if VERBOSE || opts[:debug] || opts["debug"] || true
   if VERBOSE
     system(cmd, out: $stdout, err: :out)
   else
