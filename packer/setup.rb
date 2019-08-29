@@ -81,7 +81,7 @@ def build_and_mount_ruby(source_dir, prefix_dir, mount_name, options = {})
       configure_options = options["configure_options"] || ""
       csystem "./configure --prefix #{prefix_dir} #{configure_options}", "Couldn't run configure in #{source_dir}!"
     end
-    csystem "make", "Make failed in #{source_dir}!"
+    csystem "make -j", "Make failed in #{source_dir}!"
     # This should install to the benchmark ruby dir
     csystem "make install", "Installing Ruby failed in #{source_dir}!"
   end
