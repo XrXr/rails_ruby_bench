@@ -75,8 +75,8 @@ end
 
 SiteSetting.queue_jobs = false
 
-# by default, Discourse has a "system" account
-if User.count > 1
+# by default, Discourse has a "system" account and a "discobot" account
+if User.count > 2
   puts "Only run this script against an empty DB (and in RAILS_ENV=profile)"
   exit
 end
@@ -98,7 +98,7 @@ puts
 puts "Creating 100 topics"
 
 topic_ids = 100.times.map do
-  post = PostCreator.create(users.sample, raw: sentence, title: sentence[0..50].strip, category:  categories.sample.name, skip_validations: true)
+  post = PostCreator.create(users.sample, raw: sentence, title: sentence[0..50].strip, category:  categories.sample.id, skip_validations: true)
 
   putc "."
   post.topic_id

@@ -4,6 +4,7 @@
 
 require 'optparse'
 require 'rest-client'
+require 'http-cookie'
 require 'json'
 require 'gabbler'  # Require this before requiring Rails' config/environment.rb, which will start Bundler.
 require 'get_process_mem'

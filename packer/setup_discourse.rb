@@ -118,7 +118,7 @@ puts "Hack to disable CSRF protection during benchmark..."
 APP_CONTROLLER = File.join(DISCOURSE_DIR, "app/controllers/application_controller.rb")
 contents = File.read(APP_CONTROLLER)
 original_line = "protect_from_forgery"
-patched_line = "#protect_from_forgery"
+patched_line = "protect_from_forgery(if: ->{false})" # so skip_before_action :verify_authenticity_token can work
 unless contents[patched_line]
   File.open(APP_CONTROLLER, "w") do |f|
     f.print contents.gsub(original_line, patched_line)

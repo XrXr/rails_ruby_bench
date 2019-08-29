@@ -15,7 +15,6 @@ sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xen
 sudo apt-get update
 
 sudo apt-get install -y passenger
-
 ## Locust wants Pip
 #sudo apt-get -yqq install python3 python3-pip
 #pip3 install locustio
@@ -24,11 +23,14 @@ sudo apt-get install -y passenger
 #sudo apt-get -yqq install jmeter
 
 # Wrk
-cd /home/ubuntu
-git clone https://github.com/wg/wrk.git
-cd wrk
-make
-# Install wrk binary into /usr/local/bin
-sudo cp wrk /usr/bin/
+# cd /home/ubuntu
+# git clone https://github.com/wg/wrk.git
+# cd wrk
+# make
+# # Install wrk binary into /usr/local/bin
+# sudo cp wrk /usr/bin/
+
+# Use Ubuntu's package because compiling takes too long
+sudo apt-get install -y wrk
 
 sudo apt-get remove -y unattended-upgrades
